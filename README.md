@@ -10,7 +10,7 @@ This module is intentionally small and Linux-specific. It uses LuaJIT FFI to rea
 
 - Linux
 - 64-bit LuaJIT/OpenResty
-- nginx version `1.13.0` through `1.29.5`
+- nginx version `1.13.0` through `1.31.1`
 - OpenResty `resty.core`
 - OpenResty HTTP or stream subsystem
 - nginx master process started as root when using the capability helper APIs
