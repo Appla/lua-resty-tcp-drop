@@ -27,7 +27,7 @@ local LOG_WARN = ngx.WARN
 local g_state = 0
 
 local _M = {
-    _VERSION = "1.0.0.26060801"
+    _VERSION = "1.0.0.26062501"
 }
 
 ffi.cdef [[
@@ -39,9 +39,9 @@ ffi.cdef [[
 do
     assert(jit and jit.os == 'Linux', "only support Linux with LuaJIT")
     assert(ffi.abi("64bit"), "only support 64-bit nginx/LuaJIT")
-    -- Compatible with specific versions, currently targeted at 1.13.0 - 1.31.1
-    if ngx_version < 1013000 or ngx_version > 1031001 then
-        error("required nginx version greater than 1.13.0 AND less than 1.31.2 got " .. tostring(ngx_version))
+    -- Compatible with specific versions, currently targeted at 1.13.0 - 1.32.0
+    if ngx_version < 1013000 or ngx_version >= 1032000 then
+        error("required nginx version greater than 1.13.0 AND less than 1.32.0 got " .. tostring(ngx_version))
     end
     if not pcall(ffi.typeof, "td_ngx_connection_t") then
         ffi.cdef [[

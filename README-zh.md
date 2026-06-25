@@ -10,7 +10,7 @@
 
 - Linux
 - 64 位 LuaJIT/OpenResty
-- nginx 版本 `1.13.0` 到 `1.31.1`
+- nginx 版本 `1.13.0` 到 `1.32.0`
 - OpenResty `resty.core`
 - OpenResty HTTP 或 stream 子系统
 - 使用 capability 辅助 API 时，nginx master 进程需要以 root 启动
